@@ -1,0 +1,14 @@
+<div class="calc-wrapper">
+  <h1>ngCalc</h1>
+  <div class="input-wrapper">
+    <input class="result" type="text" readonly value="{{result}}">
+  </div>
+  <div class="calc-keypad">
+    <button class="key" *ngFor="let mainKey of mainPad" (click)="addToExpression(mainKey)">
+      {{mainKey}}
+    </button>
+    <button class="key" *ngFor="let sideKey of sidePad" (click)="addToExpression(sideKey)">
+      {{sideKey}}
+    </button>
+  </div>
+</div>
